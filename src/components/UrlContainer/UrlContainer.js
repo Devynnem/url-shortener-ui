@@ -9,7 +9,7 @@ const UrlContainer = ({ urls }) => {
       title={url.title}
       shortUrl={url.short_url}
       longUrl={url.long_url}
-      key={url.key}
+      key={url.id}
     />
       // <div className="url">
       //   <h3>{url.title}</h3>

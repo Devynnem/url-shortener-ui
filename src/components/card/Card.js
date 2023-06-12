@@ -5,8 +5,8 @@ const Card = ({ title, shortUrl, longUrl, id }) => {
   return (
     <div className="url">
         <h3>{title}</h3>
-        <a>Shortened URL:  {shortUrl}</a>
         <p>Original URL:  {longUrl}</p>
+        <a>Shortened URL:  {shortUrl}</a>
     </div>
   )
 }

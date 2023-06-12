@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { postUrls } from '../../apiCalls';
 
 class UrlForm extends Component {
   constructor(props) {
@@ -18,9 +19,11 @@ class UrlForm extends Component {
     e.preventDefault();
     const newUrl = {
       id: Date.now(),
-      ...this.state
+      long_url: this.state.urlToShorten,
+      title: this.state.title
     }
-    this.props.addUrl(newUrl)
+    postUrls(newUrl)
+      .then(data => this.props.addUrl(data))
     this.clearInputs();
   }
 

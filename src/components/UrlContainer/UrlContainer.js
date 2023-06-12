@@ -2,9 +2,8 @@ import React from 'react';
 import Card from '../../components/card/Card'
 import './UrlContainer.css';
 
-const UrlContainer = props => {
-  const urlEls = props.urls.map(url => {
-    console.log(props.urls)
+const UrlContainer = ({ urls }) => {
+  const urlEls = urls.map(url => {
     return (
       <Card 
       title={url.title}
@@ -24,6 +23,7 @@ const UrlContainer = props => {
     <section>
       {/* { !urlEls.length ? urlEls : <p>No urls yet! Find some to shorten!</p> } */}
       { !urlEls.length && <p>No urls yet! Find some to shorten!</p> } 
+      {console.log(urlEls)}
       {urlEls}
     </section>
   )

@@ -1,5 +1,4 @@
 import React from 'react';
-import './Card.css'
 
 const Card = ({ title, shortUrl, longUrl, id }) => {
   return (
@@ -9,6 +8,6 @@ const Card = ({ title, shortUrl, longUrl, id }) => {
         <a>Shortened URL:  {shortUrl}</a>
     </div>
   )
-}
+};
 
 export default Card;

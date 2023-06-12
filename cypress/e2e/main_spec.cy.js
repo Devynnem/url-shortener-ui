@@ -27,7 +27,7 @@ describe('Main page', () => {
       .get('input').last().type('https://doggiesAreMyBestFriends').should('have.value', 'https://doggiesAreMyBestFriends')
   });
 
-  it('should be able to click the button to get a shorten URL', () => {
+  it('should be able to click the button to get a shortened URL', () => {
     cy.intercept('POST', 'http://localhost:3001/api/v1/urls', {
       "id": 18,
       "long_url": "https://doggiesAreMyBestFriends",

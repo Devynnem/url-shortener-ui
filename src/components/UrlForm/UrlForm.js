@@ -9,11 +9,11 @@ class UrlForm extends Component {
       title: '',
       urlToShorten: ''
     };
-  }
+  };
 
   handleNameChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -26,11 +26,11 @@ class UrlForm extends Component {
     postUrls(newUrl)
       .then(data => this.props.addUrl(data))
     this.clearInputs();
-  }
+  };
 
   clearInputs = () => {
     this.setState({title: '', urlToShorten: ''});
-  }
+  };
 
   render() {
     return (
@@ -56,7 +56,7 @@ class UrlForm extends Component {
         </button>
       </form>
     )
-  }
-}
+  };
+};
 
 export default UrlForm;
